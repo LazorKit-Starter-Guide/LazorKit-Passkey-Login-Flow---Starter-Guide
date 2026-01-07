@@ -42,7 +42,12 @@ Visit [http://localhost:3000](http://localhost:3000) to see the passkey authenti
 
 Environment-specific examples with polyfills and configurations:
 
-- **[Passkey Based Wallet Integration ExampleKit](./examples/passkey_login_example_app.md)** - step by step tutorial on how to create a passkey-based wallet
+- **[Passkey Based Wallet Integration ExampleKit](./examples/passkey_login_example_app.md)** - step by step tutorial on how to create a passkey-based wallet.
+
+- We also have a Step by Step YouTube Video Tutorial.
+- [![Watch the video](https://img.youtube.com/vi/D9QJItUdPY8/maxresdefault.jpg)](https://youtu.be/D9QJItUdPY8)
+
+### [Step by Step tutorial on how to integrate Passkey Auth Flow from LazorKit](https://youtu.be/D9QJItUdPY8)
 ## Project Structure
 
 ```
