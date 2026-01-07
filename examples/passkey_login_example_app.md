@@ -1,6 +1,6 @@
 # LazorKit Passkey Wallet Tutorial (Next.js)
 
-##Tutorial Video on how to integrate Passkey Auth from LazorKit.
+## Tutorial Video on how to integrate Passkey Auth from LazorKit.
 [![Watch the video](https://img.youtube.com/vi/D9QJItUdPY8/maxresdefault.jpg)](https://youtu.be/D9QJItUdPY8)
 
 ### [Step by Step tutorial on how to integrate Passkey Auth Flow from LazorKit](https://youtu.be/D9QJItUdPY8)
