@@ -1,11 +1,11 @@
-# 🚀 Zealy-like Referral Platform with Lazorkit
+# Zealy-like Referral Platform with Lazorkit
 
 
-## 🌟 What is This Project?
+## What is This Project?
 
 This is a **complete, production-ready Web3 referral and task platform** inspired by Zealy, built entirely with **Lazorkit's cutting-edge smart wallet technology**. It demonstrates how to build user-friendly Web3 applications that eliminate the traditional barriers to blockchain adoption.
 
-### ✨ Core Innovation
+### Core Innovation
 
 Traditional Web3 platforms face three major challenges:
 1. **Complex onboarding** (seed phrases, extensions)
@@ -13,11 +13,11 @@ Traditional Web3 platforms face three major challenges:
 3. **Poor user experience** (wallet popups, confirmations)
 
 This project solves all three by leveraging:
-- **🔐 WebAuthn Authentication** - Login with FaceID/fingerprint
-- **⛽ Paymaster Integration** - Completely gasless transactions
-- **🎯 Smart Wallet Abstraction** - No seed phrases ever
+- **WebAuthn Authentication** - Login with FaceID/fingerprint
+- **Paymaster Integration** - Completely gasless transactions
+- **Smart Wallet Abstraction** - No seed phrases ever
 
-## 🏗️ Architecture & Structure
+## Architecture & Structure
 
 ### Single-File Elegance
 
@@ -25,15 +25,15 @@ Unlike complex Web3 projects with scattered configurations, this entire platform
 
 ```
 App.tsx
-├── 📦 IMPORTS & CONFIGURATION
-├── 🗃️  REFERRAL SYSTEM UTILITIES
-├── 🎛️  COMPONENT HIERARCHY
+├──  IMPORTS & CONFIGURATION
+├──   REFERRAL SYSTEM UTILITIES
+├──   COMPONENT HIERARCHY
 │   ├── ConnectButton (Wallet Management)
 │   ├── HomePage (Landing Experience)
 │   ├── ReferralLanding (Referral Processing)
 │   └── Dashboard (User Control Center)
-├── 🚦 ROUTING SYSTEM
-└── 🔧 PROVIDER WRAPPER
+├──  ROUTING SYSTEM
+└──  PROVIDER WRAPPER
 ```
 
 ### Key Technology Stack
@@ -47,7 +47,7 @@ App.tsx
 | **Frontend** | React + TypeScript | Modern, type-safe development |
 | **Routing** | React Router v6 | Seamless client-side navigation |
 
-## 🎯 Core Concepts Explained
+## Core Concepts Explained
 
 ### 1. The Passwordless Revolution
 ```typescript
@@ -84,14 +84,14 @@ const trackReferral = (referrer, newUser) => {
 ```
 **Simplicity**: No need for complex referral smart contracts while maintaining transparency.
 
-## 🚀 Getting Started in 5 Minutes
+## Getting Started in 5 Minutes
 
 ### Prerequisites Quick Check
 - ✅ Node.js 18+ (check with `node --version`)
 - ✅ Modern browser (Chrome/Safari/Firefox)
 - ✅ Code editor (VS Code recommended)
 
-### 🎨 The User Journey
+### The User Journey
 
 #### **First-Time Visitor**
 1. Lands on beautiful, explanatory homepage
@@ -111,7 +111,7 @@ const trackReferral = (referrer, newUser) => {
 3. Transaction is gasless (sponsored)
 4. Badge marked as completed, points awarded
 
-### 🔧 Under the Hood: How It Works
+### Under the Hood: How It Works
 
 #### The Authentication Flow
 ```
@@ -154,9 +154,9 @@ Transaction Submitted to Network
 Success! (User Paid $0 in Gas)
 ```
 
-## 💡 Why This Architecture Wins
+##  Why This Architecture Wins
 
-### 🏆 Business Advantages
+###  Business Advantages
 
 | Metric | Traditional Web3 | This Platform |
 |--------|-----------------|---------------|
@@ -166,7 +166,7 @@ Success! (User Paid $0 in Gas)
 | **Support Tickets** | High (seed phrase issues) | Minimal |
 | **Mobile Compatibility** | Limited | Excellent |
 
-### 🎯 Perfect For
+### Perfect For
 - **Web3 Startups** needing frictionless onboarding
 - **NFT Projects** wanting to grow communities
 - **DAO Platforms** requiring member engagement
@@ -175,8 +175,8 @@ Success! (User Paid $0 in Gas)
 
 ## 🔗 Repository & Resources
 
-### 📁 Project Repository
-**[👉 Click here to access the complete codebase](https://github.com/LazorKit-Starter-Guide/LazorKit-Starter-Guide-Zealy-like-task-referral-project.git)**
+### Project Repository
+**[Click here to access the complete codebase](https://github.com/LazorKit-Starter-Guide/LazorKit-Starter-Guide-Zealy-like-task-referral-project.git)**
 
 The repository includes:
 - Complete `App.tsx` with all functionality
@@ -189,10 +189,10 @@ Learn how to:
 - Configure gasless transactions
 - Deploy to production
 
-### 📚 Official Documentation
-**[🔗 Lazorkit Official Docs](https://docs.lazorkit.com)**
+### Official Documentation
+**[ Lazorkit Official Docs](https://docs.lazorkit.com)**
 
-## 🛠️ Development Quick Reference
+## Development Quick Reference
 
 ### Key Configuration Points
 ```typescript
@@ -206,7 +206,7 @@ const CONFIG = {
 };
 ```
 
-## 🤝 Contributing & Community
+##  Contributing & Community
 
 We believe in open collaboration:
 
@@ -220,7 +220,5 @@ We believe in open collaboration:
 - **[React](https://reactjs.org)** - For the amazing component model
 - **[Solana](https://solana.com)** - For high-performance blockchain
 - **[WebAuthn](https://webauthn.io)** - For passwordless future
-
-## 🌟 Final Words
 
 This project isn't just code—it's a **blueprint for the future of Web3 applications**. It proves that we can build blockchain applications that are effective, and easy to integrate.
