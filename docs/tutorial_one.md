@@ -64,7 +64,8 @@ npm run dev
 ```
 
 Method 2: Create from Scratch
-bash
+
+
 # Step 1: Create a new Next.js project
 
 ```bash
