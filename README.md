@@ -4,6 +4,10 @@
 
 Welcome to the **LazorKit Starter Guide** repository! This is your comprehensive resource for learning and implementing modern Web3 authentication and application development using **LazorKit's cutting-edge smart wallet technology**.
 
+[![Watch the video](https://img.youtube.com/vi/nOGPd2XOTq4/maxresdefault.jpg)](https://youtu.be/nOGPd2XOTq4)
+
+### [Youtube Documentation Guide on building with Lazorkit](https://youtu.be/nOGPd2XOTq4)
+
 This repository contains two essential learning paths:
 
 1. **Tutorial One**: Master passkey-based wallet creation (Foundational skills)
