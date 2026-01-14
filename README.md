@@ -230,6 +230,8 @@ Learn the fundamentals of passwordless Web3 authentication:
 - ✅ **Production Deployment**: Deploy your authentication system
 
 **[ Tutorial: How to create a passkey-based wallet](https://github.com/LazorKit-Starter-Guide/Tutorial-Guide/blob/main/docs/tutorial_one.md)**
+
+
 **[ Tutorial: How to persist session across devices](https://github.com/LazorKit-Starter-Guide/Tutorial-Guide/blob/main/docs/tutorial_two.md)**
 
 ### Part 2: Example Project - Zealy-Like Platform
