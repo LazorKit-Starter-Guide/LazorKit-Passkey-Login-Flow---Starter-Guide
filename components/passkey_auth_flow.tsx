@@ -5,7 +5,7 @@
  *
  * This component demonstrates the complete passkey-based authentication flow
  * using LazorKit. It provides a user-friendly interface for:
- * 
+ *
  * 1. Initial State: Shows login button to start authentication
  * 2. Connecting State: Displays loading while user authenticates with passkey
  * 3. Connected State: Shows wallet address and logout option
@@ -50,26 +50,59 @@ export function PasskeyAuthFlow() {
     "idle" | "connecting" | "connected"
   >("idle");
 
+  // State to hold stored wallet data from session
+  const [storedWallet, setStoredWallet] = useState<{
+    smartWallet?: string;
+    smartWalletPubkey?: string;
+  } | null>(null);
+
+  // Load stored wallet from session on mount
+  useEffect(() => {
+    const stored = sessionStorage.getItem('wallet');
+    if (stored) {
+      setStoredWallet(JSON.parse(stored));
+    }
+  }, []);
+
+  // Store wallet in session when connected
+  useEffect(() => {
+    if (isConnected && wallet) {
+      const walletData = {
+        smartWallet: wallet.smartWallet,
+        smartWalletPubkey: smartWalletPubkey?.toString()
+      };
+      sessionStorage.setItem('wallet', JSON.stringify(walletData));
+      setStoredWallet(walletData);
+    }
+  }, [isConnected, wallet, smartWalletPubkey]);
+
   // Sync local login step with wallet connection status
   // This ensures UI state matches the actual wallet state
   useEffect(() => {
-    if (isConnected) {
+    if (isConnected || storedWallet) {
       setLoginStep("connected");
     } else {
       setLoginStep("idle");
     }
-  }, [isConnected]);
+  }, [isConnected, storedWallet]);
+
 
   /**
    * Handles the login/authentication process
-   * 
+   *
    * When called, it:
-   * 1. Sets UI to "connecting" state (shows loading)
-   * 2. Calls connect() which triggers passkey prompt
-   * 3. On success, useEffect will update to "connected"
-   * 4. On error, resets to "idle" state
+   * 1. Checks if session wallet exists, if so, shows connected
+   * 2. Otherwise, sets UI to "connecting" state (shows loading)
+   * 3. Calls connect() which triggers passkey prompt
+   * 4. On success, useEffect will update to "connected"
+   * 5. On error, resets to "idle" state
    */
   const handleLogin = async () => {
+    if (storedWallet) {
+      // If session wallet exists, show connected state
+      setLoginStep("connected");
+      return;
+    }
     setLoginStep("connecting");
     try {
       await connect(); // This triggers the browser's passkey prompt
@@ -79,9 +112,10 @@ export function PasskeyAuthFlow() {
     }
   };
 
+
   /**
    * Handles logout/disconnect process
-   * 
+   *
    * Clears the wallet session and resets UI to initial state
    */
   const handleLogout = async () => {
@@ -178,10 +212,11 @@ export function PasskeyAuthFlow() {
                 <label className="text-sm text-muted-foreground">
                   Smart Wallet Address
                 </label>
-                {/* Display wallet address - try wallet.smartWallet first, fallback to smartWalletPubkey */}
+                {/* Display wallet address - use stored wallet if available, fallback to current wallet */}
                 <div className="mt-1 p-3 bg-background rounded-md border border-border">
                   <code className="text-sm font-mono break-all">
-                    {wallet?.smartWallet ||
+                    {storedWallet?.smartWallet ||
+                      wallet?.smartWallet ||
                       smartWalletPubkey?.toString() ||
                       "Loading..."}
                   </code>
